@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
   var windSpeed;
 
   Future getWeather() async{
-    http.Response response = await http.get('http://api.openweathermap.org/data/2.5/weather?q=Lagos&appid=b17aaa6e4063f24e319f15b72e5d7177');
+    http.Response response = await http.get('http://api.openweathermap.org/data/2.5/weather?q=Lagos&units=metric&appid=b17aaa6e4063f24e319f15b72e5d7177');
     var result = jsonDecode(response.body);
     setState(() {
       this.temp = result['main']['temp'];
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
           Container(
             height: MediaQuery.of(context).size.height / 3,
             width: MediaQuery.of(context).size.width,
-            color: Colors.red,
+            color: Colors.blueAccent.shade200,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
