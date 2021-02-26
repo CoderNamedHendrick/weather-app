@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:http/http.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'dart:convert';
 
 void main() {
   runApp(MaterialApp(
@@ -42,7 +45,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 Text(
-                  "52\u0080",
+                  "52\u00B0",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40,
@@ -61,6 +64,35 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ],
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.all(8),
+              child: ListView(
+                children: [
+                  ListTile(
+                    leading: FaIcon(FontAwesomeIcons.thermometer),
+                    title: Text("Temperature"),
+                    trailing: Text("52\u00B0"),
+                  ),
+                  ListTile(
+                    leading: FaIcon(FontAwesomeIcons.cloud),
+                    title: Text("Weather"),
+                    trailing: Text("Weather"),
+                  ),
+                  ListTile(
+                    leading: FaIcon(FontAwesomeIcons.sun),
+                    title: Text("Humidity"),
+                    trailing: Text("12"),
+                  ),
+                  ListTile(
+                    leading: FaIcon(FontAwesomeIcons.wind),
+                    title: Text("WindSpeed"),
+                    trailing: Text("12"),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
