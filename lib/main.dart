@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
                         ),
                         child: SizedBox(
                           height: 48,
-                          width: 148,
+                          width: 204,
                           child: Padding(
                             padding: const EdgeInsets.all(6.0),
                             child: TextField(
